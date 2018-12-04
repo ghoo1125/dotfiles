@@ -20,11 +20,15 @@ set hlsearch
 hi Search ctermbg=brown ctermfg=yellow
 :nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-"" set tabs and spaces
+"" set tabstop, shiftwidth and softtabstop
 set ts=2
 set sw=2
 set sts=2
 set expandtab
+autocmd FileType python,java set sw=4 sts=4 ts=4
+
+"" auto indent
+filetype indent on
 
 "" enable mouse for vim
 set mouse=a
@@ -45,3 +49,6 @@ highlight PmenuSel ctermbg=blue ctermfg=brown gui=bold
 
 "" backspace ignore indent, eol, start instead of blocked 
 set backspace=indent,eol,start
+
+"" Disable modelline
+set nomodeline
